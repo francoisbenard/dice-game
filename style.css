@@ -1,3 +1,5 @@
+/* @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"); */
+
 body {
   margin: 0;
   background-color: #e0e0e0;
@@ -6,13 +8,90 @@ body {
     height: 100vh;
     justify-content: center;
     align-items: center;
-  
+  }
+
+.label-score-total {
+  font-size: 4rem;
 }
 
-div {
-  /* border: 1px black solid; */
+svg {
+  margin-top: -4px;
 }
 
-.container {
+.player {
+
+  box-shadow: rgba(163, 177, 198, 0.5) 4px 4px 8px 0px inset, rgb(255, 255, 255) -4px -4px 8px 0px inset;
+-webkit-box-shadow: rgba(163, 177, 198, 0.5) 4px 4px 8px 0px inset, rgb(255, 255, 255) -4px -4px 8px 0px inset;
+border-radius: 17px;
+-webkit-border-radius: 17px;
+width: 245px!important;
+max-width: 245px;
+min-width: 200px;
 }
 
+.user {
+  background-color: rgba(209, 46, 46, 0.075);
+box-shadow: rgba(178, 39, 39, 0.082) 4px 4px 8px 0px inset, rgba(240, 53, 53, 0) -4px -4px 8px 0px inset;
+-webkit-box-shadow: rgba(178, 39, 39, 0.082) 4px 4px 8px 0px inset, rgba(240, 53, 53, 0) -4px -4px 8px 0px inset;
+border-radius: 17px;
+-webkit-border-radius: 17px;
+}
+
+.buttonNewGame {
+  -moz-user-select: none; /* Firefox */
+  -webkit-user-select: none; /* Chrome, Safari, Opéra depuis la version 15 */
+  -ms-user-select: none; /* Internet explorer depuis la version 10 et Edge */
+  user-select: none; /* Propriété standard */
+  cursor: pointer;
+  box-shadow: rgba(163, 177, 198, 0.5) 4px 4px 8px 0px, rgb(255, 255, 255) -4px -4px 8px 0px;
+-webkit-box-shadow: rgba(163, 177, 198, 0.5) 4px 4px 8px 0px, rgb(255, 255, 255) -4px -4px 8px 0px;
+border-radius: 17px;
+-webkit-border-radius: 17px;
+width: 280px;
+height: 60px;
+}
+.btn-play {
+  -moz-user-select: none; /* Firefox */
+  -webkit-user-select: none; /* Chrome, Safari, Opéra depuis la version 15 */
+  -ms-user-select: none; /* Internet explorer depuis la version 10 et Edge */
+  user-select: none; /* Propriété standard */
+  cursor: pointer;
+  box-shadow: rgba(163, 177, 198, 0.5) 4px 4px 8px 0px, rgb(255, 255, 255) -4px -4px 8px 0px;
+-webkit-box-shadow: rgba(163, 177, 198, 0.5) 4px 4px 8px 0px, rgb(255, 255, 255) -4px -4px 8px 0px;
+border-radius: 17px;
+-webkit-border-radius: 17px;
+width: 180px;
+height: 40px;
+}
+.btn-pass {
+  -moz-user-select: none; /* Firefox */
+  -webkit-user-select: none; /* Chrome, Safari, Opéra depuis la version 15 */
+  -ms-user-select: none; /* Internet explorer depuis la version 10 et Edge */
+  user-select: none; /* Propriété standard */
+  cursor: pointer;
+  box-shadow: rgba(163, 177, 198, 0.5) 4px 4px 8px 0px, rgb(255, 255, 255) -4px -4px 8px 0px;
+-webkit-box-shadow: rgba(163, 177, 198, 0.5) 4px 4px 8px 0px, rgb(255, 255, 255) -4px -4px 8px 0px;
+border-radius: 17px;
+-webkit-border-radius: 17px;
+width: 180px;
+height: 40px;
+
+}
+
+.customDice {
+  font-size: 9rem;
+  color: red;
+}
+
+.label-total {
+  font-size: 1rem;
+}
+
+.numberUser {
+  font-size: 4rem;
+}
+
+@media (max-width: 992px) {
+
+
+ }

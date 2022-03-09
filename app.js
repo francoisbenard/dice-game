@@ -22,6 +22,8 @@ function reset() {
   Total1 = 0;
   Total2 = 0;
   info.innerText = "";
+  document.querySelector('.player1').classList.remove('user');
+          document.querySelector('.player2').classList.remove('user');
 }
 
 // mise à jour du scoreTemp 
@@ -30,7 +32,7 @@ function updateScore(user, randomNumber) {
   if (randomNumber === 1) {
     scoreTemp = 0;
     randomNumber = 0;
-    info.innerText = "PERDU et passe son tour";
+    displayNumber.innerHTML = "<span class='text-danger fs-2'>PERDU <br>ET<br> PASSE SON TOUR<span>";
     scoreTemp1.innerText = 0;
     scoreTemp2.innerText = 0;
   }
@@ -55,16 +57,21 @@ startButton.addEventListener('click', function () {
     // tirage du dé
     const randomNumber = Math.floor(Math.random() * 6) + 1;
     // affichage du tirage
-    displayNumber.innerText = randomNumber;
+    displayNumber.innerHTML = "<i class='bi customDice bi-dice-"+ randomNumber +"'></i>";
+   
     // si dé = 1, on change de joueur
     if (randomNumber === 1) {
       // nextUser(user);
       switch (user) {
         case 1:
           user = 2;
+          document.querySelector('.player2').classList.add('user');
+          document.querySelector('.player1').classList.remove('user');
           break;
         case 2:
           user = 1;
+          document.querySelector('.player1').classList.add('user');
+          document.querySelector('.player2').classList.remove('user');
           break;
       }
     }
@@ -82,8 +89,10 @@ passButton.addEventListener('click', function () {
       case 1:
         user = 2;
         Total1 += scoreTemp;
+        document.querySelector('.player2').classList.add('user');
+          document.querySelector('.player1').classList.remove('user');
         if (Total1 >= 10) {
-          info.innerText = "JOUEUR 1 GAGNÉ";
+          displayNumber.innerHTML = "<span class='text-danger fs-2'>JOUEUR <br><span class='numberUser'>1</span><br> GAGNE<span>";
           startGame = false;
         }
         scoreTotal1.innerText = Total1;
@@ -91,8 +100,10 @@ passButton.addEventListener('click', function () {
       case 2:
         user = 1;
         Total2 += scoreTemp;
+        document.querySelector('.player1').classList.add('user');
+          document.querySelector('.player2').classList.remove('user');
         if (Total2 >= 10) {
-          info.innerText = "JOUEUR 2 GAGNÉ";
+          displayNumber.innerHTML = "<span class='text-danger fs-2'>JOUEUR <br><span class='numberUser'>2</span><br> GAGNE<span>";    
           startGame = false;
         }
         scoreTotal2.innerText = Total2;
@@ -108,9 +119,11 @@ const newGame = document.getElementById("btn-newGame")
 newGame.addEventListener('click', function () {
   // on remet tous les scores à zero
   reset();
-  info.innerText = "Lancer les dés";
+  info.innerText = "";
   // true = démarre une partie, false = partie terminée
   startGame = true;
+  // on démarre avec le joueur 1
+  document.querySelector('.player1').classList.add('user');
 })
 
 
