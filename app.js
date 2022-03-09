@@ -90,9 +90,11 @@ passButton.addEventListener('click', function () {
         user = 2;
         Total1 += scoreTemp;
         document.querySelector('.player2').classList.add('user');
-          document.querySelector('.player1').classList.remove('user');
-        if (Total1 >= 10) {
-          displayNumber.innerHTML = "<span class='text-danger fs-2'>JOUEUR <br><span class='numberUser'>1</span><br> GAGNE<span>";
+        document.querySelector('.player1').classList.remove('user');
+        if (Total1 >= 100) {
+          displayNumber.innerHTML = "<span class='text-success fs-2'>JOUEUR <br><span class='numberUser'>1</span><br> GAGNE<span>";
+          document.querySelector('.player1').classList.add('user', 'user-win');
+          document.querySelector('.player2').classList.remove('user');  
           startGame = false;
         }
         scoreTotal1.innerText = Total1;
@@ -102,8 +104,10 @@ passButton.addEventListener('click', function () {
         Total2 += scoreTemp;
         document.querySelector('.player1').classList.add('user');
           document.querySelector('.player2').classList.remove('user');
-        if (Total2 >= 10) {
-          displayNumber.innerHTML = "<span class='text-danger fs-2'>JOUEUR <br><span class='numberUser'>2</span><br> GAGNE<span>";    
+        if (Total2 >= 100) {
+          displayNumber.innerHTML = "<span class='text-success fs-2'>JOUEUR <br><span class='numberUser'>2</span><br> GAGNE<span>"; 
+          document.querySelector('.player2').classList.add('user', 'user-win');
+        document.querySelector('.player1').classList.remove('user');  
           startGame = false;
         }
         scoreTotal2.innerText = Total2;
@@ -124,6 +128,8 @@ newGame.addEventListener('click', function () {
   startGame = true;
   // on démarre avec le joueur 1
   document.querySelector('.player1').classList.add('user');
+  document.querySelector('.player1').classList.remove('user-win'); 
+  document.querySelector('.player2').classList.remove('user-win'); 
 })
 
 

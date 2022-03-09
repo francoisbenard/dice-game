@@ -5,10 +5,10 @@ body {
   background-color: #e0e0e0;
   box-sizing: border-box;
   display: flex;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-  }
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
 
 .label-score-total {
   font-size: 4rem;
@@ -19,63 +19,72 @@ svg {
 }
 
 .player {
-
+  -moz-user-select: none;
+  /* Firefox */
+  -webkit-user-select: none;
+  /* Chrome, Safari, Opéra depuis la version 15 */
+  -ms-user-select: none;
+  /* Internet explorer depuis la version 10 et Edge */
+  user-select: none;
+  /* Propriété standard */
   box-shadow: rgba(163, 177, 198, 0.5) 4px 4px 8px 0px inset, rgb(255, 255, 255) -4px -4px 8px 0px inset;
--webkit-box-shadow: rgba(163, 177, 198, 0.5) 4px 4px 8px 0px inset, rgb(255, 255, 255) -4px -4px 8px 0px inset;
-border-radius: 17px;
--webkit-border-radius: 17px;
-width: 245px!important;
-max-width: 245px;
-min-width: 200px;
+  -webkit-box-shadow: rgba(163, 177, 198, 0.5) 4px 4px 8px 0px inset, rgb(255, 255, 255) -4px -4px 8px 0px inset;
+  border-radius: 17px;
+  -webkit-border-radius: 17px;
+}
+
+.buttonNewGame, .btn-play, .btn-pass {
+  -moz-user-select: none;
+  /* Firefox */
+  -webkit-user-select: none;
+  /* Chrome, Safari, Opéra depuis la version 15 */
+  -ms-user-select: none;
+  /* Internet explorer depuis la version 10 et Edge */
+  user-select: none;
+  /* Propriété standard */
+  cursor: pointer;
+  box-shadow: rgba(163, 177, 198, 0.5) 4px 4px 8px 0px, rgb(255, 255, 255) -4px -4px 8px 0px;
+  -webkit-box-shadow: rgba(163, 177, 198, 0.5) 4px 4px 8px 0px, rgb(255, 255, 255) -4px -4px 8px 0px;
+  border-radius: 17px;
+  -webkit-border-radius: 17px;
+
+}
+
+.player {
+  width: 245px !important;
+  max-width: 245px;
+  min-width: 200px;
 }
 
 .user {
   background-color: rgba(209, 46, 46, 0.075);
-box-shadow: rgba(178, 39, 39, 0.082) 4px 4px 8px 0px inset, rgba(240, 53, 53, 0) -4px -4px 8px 0px inset;
--webkit-box-shadow: rgba(178, 39, 39, 0.082) 4px 4px 8px 0px inset, rgba(240, 53, 53, 0) -4px -4px 8px 0px inset;
-border-radius: 17px;
--webkit-border-radius: 17px;
+  box-shadow: rgba(178, 39, 39, 0.082) 4px 4px 8px 0px inset, rgba(240, 53, 53, 0) -4px -4px 8px 0px inset;
+  -webkit-box-shadow: rgba(178, 39, 39, 0.082) 4px 4px 8px 0px inset, rgba(240, 53, 53, 0) -4px -4px 8px 0px inset;
+  border-radius: 17px;
+  -webkit-border-radius: 17px;
+}
+
+.user-win {
+  background-color: rgba(46, 209, 54, 0.075);
+  box-shadow: rgba(44, 178, 39, 0.082) 4px 4px 8px 0px inset, rgba(84, 240, 53, 0) -4px -4px 8px 0px inset;
+  -webkit-box-shadow: rgba(55, 178, 39, 0.082) 4px 4px 8px 0px inset, rgba(75, 240, 53, 0) -4px -4px 8px 0px inset;
+  border-radius: 17px;
+  -webkit-border-radius: 17px;
 }
 
 .buttonNewGame {
-  -moz-user-select: none; /* Firefox */
-  -webkit-user-select: none; /* Chrome, Safari, Opéra depuis la version 15 */
-  -ms-user-select: none; /* Internet explorer depuis la version 10 et Edge */
-  user-select: none; /* Propriété standard */
-  cursor: pointer;
-  box-shadow: rgba(163, 177, 198, 0.5) 4px 4px 8px 0px, rgb(255, 255, 255) -4px -4px 8px 0px;
--webkit-box-shadow: rgba(163, 177, 198, 0.5) 4px 4px 8px 0px, rgb(255, 255, 255) -4px -4px 8px 0px;
-border-radius: 17px;
--webkit-border-radius: 17px;
-width: 280px;
-height: 60px;
+   width: 280px;
+  height: 60px;
 }
-.btn-play {
-  -moz-user-select: none; /* Firefox */
-  -webkit-user-select: none; /* Chrome, Safari, Opéra depuis la version 15 */
-  -ms-user-select: none; /* Internet explorer depuis la version 10 et Edge */
-  user-select: none; /* Propriété standard */
-  cursor: pointer;
-  box-shadow: rgba(163, 177, 198, 0.5) 4px 4px 8px 0px, rgb(255, 255, 255) -4px -4px 8px 0px;
--webkit-box-shadow: rgba(163, 177, 198, 0.5) 4px 4px 8px 0px, rgb(255, 255, 255) -4px -4px 8px 0px;
-border-radius: 17px;
--webkit-border-radius: 17px;
-width: 180px;
-height: 40px;
-}
-.btn-pass {
-  -moz-user-select: none; /* Firefox */
-  -webkit-user-select: none; /* Chrome, Safari, Opéra depuis la version 15 */
-  -ms-user-select: none; /* Internet explorer depuis la version 10 et Edge */
-  user-select: none; /* Propriété standard */
-  cursor: pointer;
-  box-shadow: rgba(163, 177, 198, 0.5) 4px 4px 8px 0px, rgb(255, 255, 255) -4px -4px 8px 0px;
--webkit-box-shadow: rgba(163, 177, 198, 0.5) 4px 4px 8px 0px, rgb(255, 255, 255) -4px -4px 8px 0px;
-border-radius: 17px;
--webkit-border-radius: 17px;
-width: 180px;
-height: 40px;
 
+.btn-play {
+  width: 180px;
+  height: 40px;
+}
+
+.btn-pass {
+  width: 180px;
+  height: 40px;
 }
 
 .customDice {
@@ -90,8 +99,3 @@ height: 40px;
 .numberUser {
   font-size: 4rem;
 }
-
-@media (max-width: 992px) {
-
-
- }
